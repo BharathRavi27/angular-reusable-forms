@@ -1,0 +1,14 @@
+<form [formGroup]="addressForm">
+
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Reusable Form using the
+            <i>controlValueAccessor</i></h1>
+    </div>
+
+    <app-generic-form formControlName="v2"></app-generic-form>
+
+    <button class="btn btn-primary" [disabled]="!addressForm.valid" (click)="submit()">
+        Submit
+    </button>
+
+</form>

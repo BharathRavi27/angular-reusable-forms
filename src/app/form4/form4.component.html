@@ -1,0 +1,18 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Reusable Form using
+            <i>Sub-Forms</i></h1>
+    </div>
+
+    <app-generic-form-address [address]="address"></app-generic-form-address>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!addressForm.valid">
+        Submit
+    </button>
+
+    <p class="stauts">
+        Form Status: {{addressForm.status}}
+    </p>
+
+</form>

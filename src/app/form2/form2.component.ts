@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { GenericFormComponent } from './generic-form/generic-form.component';
+import { GenericFormComponent } from '../generic-form/generic-form.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-form2',
+  templateUrl: './form2.component.html',
+  styleUrls: ['./form2.component.scss']
 })
-export class AppComponent {
+export class Form2Component implements OnInit {
+
   title = 'reusable-forms';
 
 
@@ -22,12 +23,8 @@ export class AppComponent {
   }
 
   submit() {
-
+    debugger
     console.log(this.addressForm.value);
   }
 
-
-  onSubmit(data) {
-
-  }
 }

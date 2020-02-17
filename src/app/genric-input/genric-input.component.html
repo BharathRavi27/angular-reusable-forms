@@ -1,0 +1,18 @@
+<div class="form-label-group">
+    <input class="form-control" [type]="type" #input (input)="onChange($event.target.value)" (blur)="onTouched()"
+        [disabled]="disabled" [placeholder]="placeholder">
+    <div class="d-flex">
+        <span class="v" *ngIf="(isRequired && controlDir && controlDir.control.valid &&
+      controlDir.control.touched)">
+            <img width="24"
+                src="https://cdn3.vectorstock.com/i/1000x1000/40/22/green-check-mark-icon-tick-symbol-vector-21574022.jpg">
+        </span>
+
+        <label class="mr-auto">{{label}}
+            <span class="required" *ngIf="isRequired">*</span>
+        </label>
+
+        <span class="error" *ngIf="controlDir && !controlDir.control.valid 
+       && controlDir.control.touched">{{errorMsg}}</span>
+    </div>
+</div>

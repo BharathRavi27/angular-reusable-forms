@@ -1,0 +1,11 @@
+<form class="form-signin" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">First Try</h1>
+    </div>
+
+    <app-genric-input [placeholder]="'Email'" [isRequired]="true" [errorMsg]="'Please enter your name'"
+        [label]="'User Email'" [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'" ngModel name="email">
+    </app-genric-input>
+
+    <button class="btn btn-lg btn-primary btn-block" [disabled]="!f.valid" type="submit">Sign in</button>
+</form>
